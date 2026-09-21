@@ -1,0 +1,1160 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, "Trebuchet MS", sans-serif;
+
+    background-color: #f4f6f9;
+    color: #222;
+}
+
+#bloc_page {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+
+    background-color: white;
+}
+
+
+/* HEADER*/
+
+header {
+    min-height: 100px;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background-color: white;
+
+    border-bottom: 3px solid #0b5ed7;
+}
+
+
+/* Logo + nom */
+
+#titre_principal {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+#logo {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+
+    margin-right: 10px;
+}
+
+#nom_boutique {
+    white-space: nowrap;
+}
+
+#nom_boutique h1 {
+    margin: 0;
+
+    color: #0b5ed7;
+
+    font-size: 2em;
+}
+
+#nom_boutique h2 {
+    margin: 3px 0 0 0;
+
+    color: #555;
+
+    font-size: 0.9em;
+
+    font-weight: normal;
+}
+
+
+/*  RECHERCHE */
+
+#recherche {
+    display: flex;
+
+    width: 380px;
+
+    margin-left: auto;
+}
+
+#txt_recherche {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px 0 0 5px;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+#txt_recherche:focus {
+    border-color: #0b5ed7;
+}
+
+#btn_recherche {
+    width: 50px;
+
+    border: none;
+
+    background-color: #0b5ed7;
+
+    color: white;
+
+    font-size: 18px;
+
+    border-radius: 0 5px 5px 0;
+
+    cursor: pointer;
+}
+
+#btn_recherche:hover {
+    background-color: #084298;
+}
+
+
+/*  ACTIONS */
+
+#actions {
+    display: flex;
+
+    gap: 15px;
+
+    white-space: nowrap;
+}
+
+#actions a {
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+#actions a:hover {
+    color: #0b5ed7;
+}
+
+
+/*  MENU PRINCIPAL */
+
+#barre_menu {
+    background-color: #0b1f3a;
+
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+#menu_principal ul {
+    list-style-type: none;
+
+    margin: 0;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+#menu_principal li {
+    display: inline-block;
+}
+
+#menu_principal a {
+    display: block;
+
+    padding: 16px 18px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+#menu_principal a:hover {
+    background-color: #0b5ed7;
+}
+
+
+/* Bouton hamburger */
+
+#btn_menu {
+    display: none;
+
+    border: none;
+
+    background-color: transparent;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* BANNIERE ACCUEIL */
+
+#banniere_image {
+    min-height: 350px;
+
+    margin: 20px;
+
+    border-radius: 10px;
+
+    background-image: url("../images/banner.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.20);
+}
+
+#banniere_contenu {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    padding: 30px;
+
+    color: white;
+
+    background-color: rgba(0, 0, 0, 0.60);
+}
+
+#banniere_contenu h1 {
+    margin: 0 0 10px 0;
+
+    font-size: 2em;
+}
+
+#banniere_contenu p {
+    margin-bottom: 20px;
+
+    font-size: 1em;
+}
+
+
+/* 7. BOUTONS */
+
+.bouton {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    background-color: #0b5ed7;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.bouton:hover {
+    background-color: #084298;
+}
+
+
+/*  TITRES DES SECTIONS */
+
+section h1,
+main h1 {
+    color: #0b1f3a;
+}
+
+section h2 {
+    color: #0b5ed7;
+}
+
+
+/* CATEGORIES */
+
+#categories {
+    padding: 20px;
+}
+
+#categories > h1 {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.categories_conteneur {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.categorie {
+    text-align: center;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    padding: 10px;
+
+    transition: 0.3s;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.categorie:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.categorie img {
+    width: 100%;
+
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+}
+
+.categorie h2 {
+    margin: 12px 0 5px 0;
+
+    font-size: 16px;
+}
+
+
+/*  PRODUIT */
+
+#produits_populaires {
+    padding: 20px;
+}
+
+#produits_populaires > h1 {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.produits_conteneur {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.produit {
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    padding: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.produit:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.produit img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: contain;
+
+    border-radius: 5px;
+}
+
+.produit h2 {
+    font-size: 17px;
+
+    margin: 12px 0;
+}
+
+.prix {
+    color: #0b5ed7;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.etoiles {
+    color: #f5a623;
+
+    letter-spacing: 2px;
+}
+
+.btn_panier {
+    width: 100%;
+
+    padding: 10px;
+
+    background-color: #0b5ed7;
+
+    border: none;
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn_panier:hover {
+    background-color: #084298;
+}
+
+
+/* POURQUOI NOVASHOP */
+
+#pourquoi_novashop {
+    margin: 20px;
+
+    padding: 25px;
+
+    background-color: #eef5ff;
+
+    border-left: 5px solid #0b5ed7;
+
+    border-radius: 5px;
+}
+
+#pourquoi_novashop h1 {
+    margin-top: 0;
+
+    color: #0b1f3a;
+}
+
+#pourquoi_novashop p {
+    padding: 8px 0;
+
+    margin: 5px 0;
+}
+
+
+/* PAGES INTERNES */
+
+.page {
+    padding: 30px 25px;
+
+    min-height: 500px;
+}
+
+.page > h1 {
+    text-align: center;
+
+    margin-top: 0;
+
+    margin-bottom: 10px;
+}
+
+.intro {
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 30px;
+}
+
+
+/* PAGE PRODUITS */
+
+.categorie_produit {
+    margin-bottom: 20px;
+
+    padding: 20px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-left: 5px solid #0b5ed7;
+
+    border-radius: 5px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.categorie_produit h2 {
+    margin-top: 0;
+}
+
+.categorie_produit li {
+    margin-bottom: 7px;
+}
+
+.categorie_produit a {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: #0b5ed7;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.categorie_produit a:hover {
+    text-decoration: underline;
+}
+
+
+/* PAGE À PROPOS */
+
+.apropos_contenu {
+    margin-bottom: 20px;
+
+    padding: 25px;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+    border: 1px solid #ddd;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.07);
+}
+
+.apropos_contenu h2 {
+    margin-top: 0;
+
+    border-bottom: 2px solid #0b5ed7;
+
+    padding-bottom: 8px;
+}
+
+.apropos_contenu p {
+    line-height: 1.7;
+}
+
+.apropos_contenu li {
+    margin-bottom: 10px;
+}
+
+
+/* PAGE CONTACT */
+
+.contact_conteneur {
+    display: grid;
+
+    grid-template-columns: 1fr 1.5fr;
+
+    gap: 25px;
+}
+
+
+/* Informations */
+
+.contact_infos {
+    padding: 25px;
+
+    background-color: #eef5ff;
+
+    border-radius: 8px;
+
+    border: 1px solid #d6e5ff;
+}
+
+.contact_infos h2 {
+    margin-top: 0;
+
+    color: #0b1f3a;
+}
+
+.contact_infos p {
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* Formulaire */
+
+.contact_formulaire {
+    padding: 25px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.07);
+}
+
+.contact_formulaire h2 {
+    margin-top: 0;
+}
+
+.contact_formulaire label {
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+.contact_formulaire input,
+.contact_formulaire textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.contact_formulaire input:focus,
+.contact_formulaire textarea:focus {
+    border-color: #0b5ed7;
+}
+
+.contact_formulaire textarea {
+    resize: vertical;
+}
+
+#btn_envoyer {
+    margin-top: 20px;
+
+    padding: 12px 20px;
+
+    background-color: #0b5ed7;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#btn_envoyer:hover {
+    background-color: #084298;
+}
+
+
+/* PAGE PANIER */
+
+.panier_conteneur {
+    width: 100%;
+
+    overflow-x: auto;
+
+    margin-bottom: 25px;
+}
+
+#table_panier {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: white;
+}
+
+#table_panier th {
+    padding: 14px;
+
+    background-color: #0b1f3a;
+
+    color: white;
+
+    text-align: center;
+}
+
+#table_panier td {
+    padding: 12px;
+
+    border-bottom: 1px solid #ddd;
+
+    text-align: center;
+}
+
+#table_panier tr:hover {
+    background-color: #f5f8fc;
+}
+
+.image_panier {
+    width: 60px;
+
+    height: 60px;
+
+    object-fit: contain;
+
+    vertical-align: middle;
+
+    margin-right: 10px;
+}
+
+.quantite {
+    width: 60px;
+
+    padding: 8px;
+
+    text-align: center;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+}
+
+.btn_supprimer {
+    padding: 8px 10px;
+
+    background-color: #dc3545;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.btn_supprimer:hover {
+    background-color: #b02a37;
+}
+
+
+/* Résumé panier */
+
+#resume_panier {
+    max-width: 500px;
+
+    margin-left: auto;
+
+    padding: 25px;
+
+    background-color: #eef5ff;
+
+    border-radius: 8px;
+
+    border: 1px solid #d6e5ff;
+}
+
+#resume_panier h2 {
+    margin-top: 0;
+
+    color: #0b1f3a;
+}
+
+#resume_panier p {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 8px 0;
+
+    border-bottom: 1px solid #d5dce5;
+}
+
+.total_final {
+    font-size: 20px;
+
+    color: #0b5ed7;
+}
+
+.actions_panier {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+#btn_commander {
+    padding: 12px 20px;
+
+    background-color: #198754;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#btn_commander:hover {
+    background-color: #146c43;
+}
+/* INFORMATIONS DU CLIENT */
+
+#informations_client {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.07);
+}
+
+#informations_client h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#informations_client p {
+    margin-bottom: 20px;
+}
+
+#informations_client label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+#informations_client input,
+#informations_client textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+#informations_client input:focus,
+#informations_client textarea:focus {
+    outline: none;
+    border-color: #0b5ed7;
+}
+
+#informations_client textarea {
+    resize: vertical;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #0b1f3a;
+
+    color: white;
+
+    border-top: 4px solid #0b5ed7;
+}
+
+footer p {
+    margin: 7px;
+}
+
+
+/* TABLETTE */
+
+@media screen and (max-width: 900px) {
+
+    header {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    #recherche {
+        order: 3;
+
+        width: 100%;
+
+        margin: 5px 0 0 0;
+    }
+
+    #actions {
+        margin-left: 10px;
+    }
+
+    .categories_conteneur {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .produits_conteneur {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact_conteneur {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* TELEPHONE */
+
+@media screen and (max-width: 600px) {
+
+    #bloc_page {
+        width: 100%;
+    }
+
+
+    /* Header */
+
+    header {
+        padding: 12px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    #titre_principal {
+        justify-content: center;
+    }
+
+    #logo {
+        width: 55px;
+
+        height: 55px;
+    }
+
+    #nom_boutique h1 {
+        font-size: 1.6em;
+    }
+
+    #nom_boutique h2 {
+        font-size: 0.8em;
+    }
+
+    #recherche {
+        width: 100%;
+    }
+
+    #actions {
+        justify-content: center;
+    }
+
+
+    /* Menu mobile */
+
+    #barre_menu {
+        min-height: 55px;
+
+        justify-content: flex-start;
+
+        padding: 5px 10px;
+    }
+
+    #btn_menu {
+        display: block;
+    }
+
+    #menu_principal {
+        display: none;
+
+        width: 100%;
+    }
+
+    #menu_principal ul {
+        display: block;
+
+        width: 100%;
+    }
+
+    #menu_principal li {
+        display: block;
+
+        width: 100%;
+    }
+
+    #menu_principal a {
+        padding: 13px;
+
+        text-align: center;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+
+    /* Bannière */
+
+    #banniere_image {
+        min-height: 280px;
+
+        margin: 10px;
+    }
+
+    #banniere_contenu {
+        padding: 18px;
+    }
+
+    #banniere_contenu h1 {
+        font-size: 1.4em;
+    }
+
+
+    /* Grilles */
+
+    .categories_conteneur {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .produits_conteneur {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .categorie img {
+        height: 100px;
+    }
+
+    .produit {
+        padding: 8px;
+    }
+
+    .produit img {
+        height: 130px;
+    }
+
+    .produit h2 {
+        font-size: 14px;
+    }
+
+    .prix {
+        font-size: 16px;
+    }
+
+
+    /* Pages */
+
+    .page {
+        padding: 20px 12px;
+    }
+
+    .page > h1 {
+        font-size: 1.6em;
+    }
+
+
+    /* Contact */
+
+    .contact_conteneur {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Panier */
+
+    #resume_panier {
+        max-width: 100%;
+    }
+
+    .actions_panier {
+        flex-direction: column;
+    }
+
+    .actions_panier .bouton,
+    #btn_commander {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 20px 10px;
+
+        font-size: 13px;
+    }
+
+}
