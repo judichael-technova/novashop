@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>NOVASHOP - Panier</title>
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+</head>
+
+<body>
+
+<div id="bloc_page">
+
+<header>
+
+    <div id="titre_principal">
+
+        <img src="/images/logo.png" alt="Logo NOVASHOP" id="logo">
+
+        <div id="nom_boutique">
+            <h1>NOVASHOP</h1>
+            <h2>La technologie à portée de main</h2>
+        </div>
+
+    </div>
+
+
+    <div id="recherche">
+
+        <input type="text"
+               id="txt_recherche"
+               placeholder="Rechercher un produit...">
+
+        <button id="btn_recherche">🔍</button>
+
+    </div>
+
+
+    <div id="actions">
+
+        <a href="#">👤 Connexion</a>
+
+        <a href="panier.html">🛒 Panier</a>
+
+    </div>
+
+</header>
+
+
+<!-- MENU -->
+
+<div id="barre_menu">
+
+    <button id="btn_menu">☰</button>
+
+    <nav id="menu_principal">
+
+        <ul>
+
+            <li>
+                <a href="index.html">Accueil</a>
+            </li>
+
+            <li>
+                <a href="boutique.html">Boutique</a>
+            </li>
+
+            <li>
+                <a href="produits.html">Produits</a>
+            </li>
+
+            <li>
+                <a href="promotions.html">Promotions</a>
+            </li>
+
+            <li>
+                <a href="panier.html">Panier</a>
+            </li>
+
+            <li>
+                <a href="apropos.html">À propos</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</div>
+
+
+<!-- PANIER -->
+
+<main class="page">
+
+    <h1>🛒 Mon panier</h1>
+
+    <p class="intro">
+        Retrouvez ici les produits que vous souhaitez acheter.
+    </p>
+
+
+    <!-- TABLEAU DU PANIER -->
+
+    <div class="panier_conteneur">
+
+        <table id="table_panier">
+
+            <thead>
+
+                <tr>
+
+                    <th>Produit</th>
+
+                    <th>Prix</th>
+
+                    <th>Quantité</th>
+
+                    <th>Total</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <!-- Exemple de produit -->
+
+                <tr>
+
+                    <td>
+                        <img src="/images/iphone.png"
+                             alt="iPhone 15"
+                             class="image_panier">
+
+                        iPhone 15
+                    </td>
+
+                    <td>750 000 FC</td>
+
+                    <td>
+                        <input type="number"
+                               value="1"
+                               min="1"
+                               class="quantite">
+                    </td>
+
+                    <td>750 000 FC</td>
+
+                    <td>
+                        <button class="btn_supprimer">
+                            ❌ Supprimer
+                        </button>
+                    </td>
+
+                </tr>
+
+
+                <!-- Deuxième exemple -->
+
+                <tr>
+
+                    <td>
+                        <img src="/images/ecouteurs.png"
+                             alt="Écouteurs Bluetooth"
+                             class="image_panier">
+
+                        Écouteurs Bluetooth
+                    </td>
+
+                    <td>45 000 FC</td>
+
+                    <td>
+                        <input type="number"
+                               value="1"
+                               min="1"
+                               class="quantite">
+                    </td>
+
+                    <td>45 000 FC</td>
+
+                    <td>
+                        <button class="btn_supprimer">
+                            ❌ Supprimer
+                        </button>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+<!-- INFORMATIONS DU CLIENT -->
+
+<div id="informations_client">
+
+    <h2>👤 Informations du client</h2>
+
+    <p>Veuillez renseigner vos informations pour recevoir votre commande.</p>
+
+    <label for="client_nom">Nom complet</label>
+    <input
+        type="text"
+        id="client_nom"
+        placeholder="Exemple : Jean Mpunga"
+        required
+    >
+
+    <label for="client_telephone">Numéro WhatsApp</label>
+    <input
+        type="tel"
+        id="client_telephone"
+        placeholder="Exemple : +243 81 234 5678"
+        required
+    >
+
+    <label for="client_adresse">Adresse de livraison</label>
+    <textarea
+        id="client_adresse"
+        rows="4"
+        placeholder="Exemple : Kinshasa, Gombe, avenue..."
+        required
+    ></textarea>
+
+</div>
+
+
+<!-- TOTAL -->
+
+<div id="resume_panier">
+
+    <h2>Résumé de la commande</h2>
+
+    <p>
+        Sous-total :
+        <strong id="sous_total">
+            0 FC
+        </strong>
+    </p>
+
+    <p>
+        Livraison :
+        <strong>
+            À déterminer
+        </strong>
+    </p>
+
+    <p class="total_final">
+        Total :
+        <strong id="total_panier">
+            0 FC
+        </strong>
+    </p>
+
+    <div class="actions_panier">
+
+        <a href="boutique.html" class="bouton">
+            ← Continuer mes achats
+        </a>
+
+        <button id="btn_commander">
+            ✅ Passer la commande
+        </button>
+
+    </div>
+
+</div>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 NOVASHOP - Tous droits réservés
+    </p>
+
+    <p>
+        La technologie à portée de main
+    </p>
+
+    <p>Site web conçu et développé par <strong>Judichael Mpunga</strong></p>
+
+</footer>
+
+
+</div>
+
+
+<script src="/js/script.js"></script>
+
+</body>
+
+</html>
